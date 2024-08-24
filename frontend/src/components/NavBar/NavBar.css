@@ -1,0 +1,117 @@
+.navbar{
+    padding: 5px 0px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.navbar .logo{
+    width: 14vw;
+}
+
+.navbar-menu{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    color: #49557e;
+    gap:2vw;
+    font-weight: 18px;
+    font-size: 2vw;
+}
+
+.navbar-right{
+    display: flex;
+    align-items: center;
+    gap:2vw;
+}
+.navbar button{
+    background:transparent;
+    font-size: 14px;
+    border-radius: 50px;
+    border: 1px solid tomato;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.active{
+    /* padding-bottom: 2px; */
+    border-bottom: 1.5px solid red;
+}
+
+.varbar-search-icon{
+    position: relative;
+}
+.varbar-search-icon img{
+    height: 20px;
+    width: 20px;
+}
+.varbar-search-icon .dot{
+    position: absolute;
+    height: 10px;
+    width: 10px;
+    border-radius: 100%;
+    background-color: red;
+    top:-8px;
+    right: -8px;
+}
+.navbar .icon{
+    display: none;
+}
+@media (max-width:300px) {
+
+    .navbar{
+        padding: 3px 0px;
+    }
+    
+    .navbar .logo{
+        width: 16vw;
+    }
+    
+    .navbar-menu{
+        display: none;
+    }
+    
+    .navbar-right{
+        display: flex;
+        align-items: center;
+        gap:2vw;
+    }
+    .navbar button{
+        background:transparent;
+        font-size: 8px;
+        padding: 3px 8px;
+    }
+    .navbar-right img{
+        height: 15px;
+    }
+    
+    .varbar-search-icon{
+        position: relative;
+        height: 10px;
+        width: 10px;
+    }
+    .varbar-search-icon img{
+        height: 12px;
+        width: 10px;
+    }
+    .varbar-search-icon .dot{
+        position: absolute;
+        height: 5px;
+        width: 5px;
+        border-radius: 100%;
+        background-color: red;
+        /* top:-8px;
+        right: -8px; */
+    }
+    .navbar i{
+        display: block;
+        margin-left: 100px;
+        font-size:15px;
+    }
+    .navbar .icon{
+        display: inline;
+        border: none;
+    }
+
+}
