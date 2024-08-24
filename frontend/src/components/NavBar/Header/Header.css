@@ -14,17 +14,19 @@
     gap:1.5vw;
     max-width: 50%;
     left: 6vw;
-    
+    background: transparent;
 }
 
 .header-content h2{
     font-weight: 500;
     color: white;  
-    font-size: max(4.5vw,22px); 
+    font-size: max(4.5vw,22px);
+    background: transparent;     
 }
 .header-content p{
     color: white;
     font-size: 2vw;
+    background: transparent;
 }
 .header-content button{
     border: none;
