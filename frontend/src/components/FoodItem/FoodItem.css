@@ -10,6 +10,7 @@
     width: 100%;
     text-align: center; /* Center the image */
     overflow: hidden; /* Hide any overflow */
+    position: relative;
 }
 
 .food-item-image {
@@ -44,6 +45,20 @@
     padding: 0px 10px;
 }
 
+.food-item-counter{
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    background:rgb(255, 255, 255);
+    border-radius: 10px;
+    margin-top: -20%;
+    margin-left: 60%;
+    p{
+        padding: 5px;
+    }
+}
+
+
 @media (max-width: 300px) {
     .food-item {
         max-width: 100%;
@@ -58,5 +73,19 @@
     }
     .food-item-price {
         padding-right: 100px;
+    }
+    .food-item-counter{
+        margin-top: -25%;
+        margin-left: 50%;
+    }
+    .food-item-img-container .add{
+        height: 20px;   
+    }
+    .food-item-counter img{
+        height: 20px;
+    }
+    .food-item-counter p{
+        font-size: 10px;
+        font-weight: bold;
     }
 }
