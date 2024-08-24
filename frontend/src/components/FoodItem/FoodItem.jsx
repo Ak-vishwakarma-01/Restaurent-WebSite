@@ -10,7 +10,7 @@ export const FoodItem = (props) => {
             {!itemCount
               ?<img className='add' onClick={()=>setItemCount(pre=>pre+1)} src={assets.add_icon_white}/>
               :<div className='food-item-counter'>
-                <img onClick={()=>setItemCount(pre=>pre-1)} src={assets.remove_icon_red}/>
+                <img onClick={()=>setItemCount(pre=>pre-1)  } src={assets.remove_icon_red}/>
                 <p>{itemCount}</p>
                 <img onClick={()=>setItemCount(pre=>pre-1)} src={assets.add_icon_green}/>
               </div>

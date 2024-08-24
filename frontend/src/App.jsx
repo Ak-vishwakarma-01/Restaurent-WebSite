@@ -6,9 +6,7 @@ import Home from './pages/Home/Home'
 import { PlaceOrder } from './pages/PlaceOrder/PlaceOrder'
 
 const App = () => {
-  useEffect(()=>{
-    alert("this project is on working mode");
-  },[])
+  
   return (
     <div className='app'>
       <NavBar/>
