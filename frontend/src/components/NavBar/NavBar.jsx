@@ -1,7 +1,8 @@
 import React, { useState } from 'react'
 import './NavBar.css'
 import {assets} from '../../assets/assets'
-const NavBar = () => {
+import {Link} from 'react-router-dom';
+const NavBar = ({setShowLogin}) => {
  
     const [menu,setMenu] = useState("home");
     function lichange(event){
@@ -9,13 +10,13 @@ const NavBar = () => {
     }
 
   return (
-    <div className='navbar'>
+    <div className='navbar'> 
         <img src={assets.logo} alt="" className="logo" />
         <ul className="navbar-menu">
-            <li onClick={lichange} className={menu==="home"?"active":""}>home</li>
-            <li onClick={lichange} className={menu==="menu"?"active":""}>menu</li>
-            <li onClick={lichange} className={menu==="mobile-app"?"active":""}>mobile-app</li>
-            <li onClick={lichange} className={menu==="contact-us"?"active":""}>contact-us</li>
+            <Link to='/' onClick={lichange} className={menu==="home"?"active":""}>home</Link>
+            <a href='#explore-menu' onClick={lichange} className={menu==="menu"?"active":""}>menu</a>
+            <a href='#app-download' onClick={lichange} className={menu==="mobile-app"?"active":""}>mobile-app</a>
+            <a href='#footer' onClick={lichange} className={menu==="contact-us"?"active":""}>contact-us</a>
         </ul>
         <button className='icon'><i class="ri-menu-3-fill"></i></button>
         <div className="navbar-right">
@@ -24,7 +25,7 @@ const NavBar = () => {
                 <div className="dot"></div>
                 <img src={assets.basket_icon}></img>
             </div>
-           <button className="sign-in">Sign In</button>
+           <button onClick={()=>setShowLogin(true)} className="sign-in">Sign In</button>
         </div>
     </div>
   )
