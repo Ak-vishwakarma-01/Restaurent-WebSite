@@ -1,0 +1,28 @@
+.place-order{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 20px;
+}
+.place-order-left{
+    display: flex;
+    gap:10px;
+    flex-direction: column;
+    width: 50%;
+    input{
+        width: 100%;
+    }
+}
+.multi-fields{
+    display: flex;
+    gap: 10px;
+}
+@media (max-width:400px) {
+    .place-order{
+        display: flex;
+        flex-direction: column;
+    }
+    .place-order-left input{
+        width: 100%;
+    }
+}

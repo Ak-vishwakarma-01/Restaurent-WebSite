@@ -10,12 +10,12 @@
 }
 .food-display-list{
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
     gap: 2vw;
     row-gap: 5vw;
 }
 
-@media (max-width:300px) {
+@media (max-width:400px) {
     .food-display-list{
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(100px,1fr));

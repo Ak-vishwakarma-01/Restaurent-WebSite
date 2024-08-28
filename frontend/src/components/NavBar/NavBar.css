@@ -32,6 +32,7 @@
     border: 1px solid tomato;
     padding: 5px 10px;
     cursor: pointer;
+    width: 70px;
 }
 
 .active{
@@ -58,7 +59,7 @@
 .navbar .icon{
     display: none;
 }
-@media (max-width:300px) {
+@media (max-width:400px) {
 
     .navbar{
         padding: 3px 0px;
@@ -66,10 +67,6 @@
     
     .navbar .logo{
         width: 16vw;
-    }
-    
-    .navbar-menu{
-        display: none;
     }
     
     .navbar-right{
@@ -80,7 +77,8 @@
     .navbar button{
         background:transparent;
         font-size: 8px;
-        padding: 3px 8px;
+        padding: 1px 4px;
+        width: 40px;
     }
     .navbar-right img{
         height: 15px;
