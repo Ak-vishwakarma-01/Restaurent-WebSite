@@ -1,28 +1,25 @@
-import express from 'express'
-import cors from "cors"
-import { connectDB } from './config/db.js';
-import foodRouter from './routes/foodRoute.js';
+import express from "express";
+import cors from "cors";
+import { connectDB } from "./config/db.js";
+import foodRouter from "./routes/foodRoute.js";
 
-const app = express()
+const app = express();
 const port = 4000;
 
-// middleware
-app.use(express.json())
-app.use(cors()) // escess backend from any frontend
+app.use(cors());
+app.use(express.json());
 
-//Db connection
-
+// db connection
 connectDB();
-//api endpoints
-app.use("/api/food",foodRouter)
 
-app.get("/",(req,res)=>{
-    res.send("APi working");
-})
-  
+// api endpoints
+app.use("/api/food", foodRouter);
+
+app.get("/", (req, res) => {
+    console.log("api working");
+    res.send("api working");
+});
 
 app.listen(port,()=>{
-    console.log(`Server started on https://localhost:${port}`)
+    console.log("server is running ");
 })
-
-//mongodb+srv://akv7115:80099@cluster0.dmuua.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0
